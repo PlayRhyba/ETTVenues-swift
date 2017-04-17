@@ -40,8 +40,15 @@ class Requester: NSObject {
     
     
     func photos(withLocation location: CLLocation,
-                completion:([Photo]?, Error?) -> Void) {
-        
+                completion:@escaping ([Photo]?, Error?) -> Void) {
+        venues(withLocation: location) { (venues, error) in
+            if error != nil {
+                completion(nil, error)
+            }
+            else {
+                
+            }
+        }
     }
     
     
@@ -49,18 +56,55 @@ class Requester: NSObject {
     
     
     func venues(withLocation location: CLLocation,
-                completion:([Venue]?, Error?) -> Void) {
+                completion:@escaping ([Venue]?, Error?) -> Void) {
+        let parameters = commonParameters()
         
+        parameters.addEntries(from: ["limit": Constants.VenuesLimit,
+                                     "ll": String(format: "%lf,%lf",
+                                                  location.coordinate.latitude,
+                                                  location.coordinate.longitude)])
+        
+        sessionManager.get("v2/venues/search",
+                           parameters: parameters,
+                           progress: nil,
+                           success: { (_, response) in
+                            if let r = response as? [String: Any] {
+                                let venues = Venue.venues(withDictionary: r)
+                                completion(venues, nil)
+                            }
+                            else {
+                                completion(nil, Errors.unexpectedResponseDataStructureError())
+                            }
+                            
+        }) { (_, error) in
+            completion(nil, error)
+        }
     }
     
     
     func photos(withVenueID venueID: String,
-                completion:([Photo]?, Error?) -> Void) {
+                completion:@escaping ([Photo]?, Error?) -> Void) {
+        let parameters = commonParameters()
+        parameters.addEntries(from: ["limit": Constants.MaxPhotosAmount])
         
+        sessionManager.get(String(format: "v2/venues/%@/photos", venueID),
+                           parameters: parameters,
+                           progress: nil,
+                           success: { (_, response) in
+                            if let r = response as? [String: Any] {
+                                let photos = Photo.photos(withDictionary: r)
+                                completion(photos, nil)
+                            }
+                            else {
+                                completion(nil, Errors.unexpectedResponseDataStructureError())
+                            }
+        }) { (_, error) in
+            completion(nil, error)
+        }
     }
     
     
-    func parameters() -> [String: String] {
+    func commonParameters() -> NSMutableDictionary {
         return ["client_id": Constants.ClientID,
                 "client_secret": Constants.ClientSecret,
                 "v": Constants.VersionDate]

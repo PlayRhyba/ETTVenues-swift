@@ -24,14 +24,14 @@ struct Errors {
     }
     
     
-    func unexpectedResponseDataStructureError() -> Error {
+    static func unexpectedResponseDataStructureError() -> Error {
         return NSError(domain: Domains.ResponseObject.rawValue,
                        code: Codes.UnexpectedResponseDataStructure.rawValue,
                        userInfo: [NSLocalizedDescriptionKey: "Unexpected response data structure."])
     }
     
     
-    func internalError() -> Error {
+    static func internalError() -> Error {
         return NSError(domain: Domains.Internal.rawValue,
                        code: Codes.Internal.rawValue,
                        userInfo: [NSLocalizedDescriptionKey: "Internal Error."])
