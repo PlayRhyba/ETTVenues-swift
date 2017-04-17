@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1127B0701EA5167C00B2C154 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127B06F1EA5167C00B2C154 /* BaseObject.swift */; };
+		1127B0711EA5167C00B2C154 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127B06F1EA5167C00B2C154 /* BaseObject.swift */; };
+		1127B0731EA5169800B2C154 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127B0721EA5169800B2C154 /* Photo.swift */; };
+		1127B0741EA5169800B2C154 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127B0721EA5169800B2C154 /* Photo.swift */; };
+		1127B0761EA516A700B2C154 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127B0751EA516A700B2C154 /* Venue.swift */; };
+		1127B0771EA516A700B2C154 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127B0751EA516A700B2C154 /* Venue.swift */; };
 		11AD4AEB1EA3EEDE00AFD795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4AEA1EA3EEDE00AFD795 /* AppDelegate.swift */; };
 		11AD4AF01EA3EEDE00AFD795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AD4AEE1EA3EEDE00AFD795 /* Main.storyboard */; };
 		11AD4AF21EA3EEDE00AFD795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AD4AF11EA3EEDE00AFD795 /* Assets.xcassets */; };
@@ -17,6 +23,10 @@
 		11AD4B0C1EA4151E00AFD795 /* ETTVenues_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4B0B1EA4151E00AFD795 /* ETTVenues_swiftTests.swift */; };
 		11AD4B141EA415FC00AFD795 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4B011EA3F35700AFD795 /* LocationManager.swift */; };
 		11AD4B151EA41B3B00AFD795 /* LocationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4B031EA3F83300AFD795 /* LocationObserver.swift */; };
+		11CF0AE61EA52DE10072A0AB /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0AE51EA52DE10072A0AB /* Requester.swift */; };
+		11CF0AE71EA52DE10072A0AB /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0AE51EA52DE10072A0AB /* Requester.swift */; };
+		11CF0AEA1EA533270072A0AB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0AE91EA533270072A0AB /* Errors.swift */; };
+		11CF0AEB1EA533270072A0AB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0AE91EA533270072A0AB /* Errors.swift */; };
 		30A22F37BDB814A9F3CE2219 /* Pods_ETTVenues_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6D6002677A2859CB91C196 /* Pods_ETTVenues_swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1127B06F1EA5167C00B2C154 /* BaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
+		1127B0721EA5169800B2C154 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		1127B0751EA516A700B2C154 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		11AD4AE71EA3EEDE00AFD795 /* ETTVenues_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETTVenues_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AD4AEA1EA3EEDE00AFD795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11AD4AEF1EA3EEDE00AFD795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +56,8 @@
 		11AD4B091EA4151E00AFD795 /* ETTVenues_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETTVenues_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AD4B0B1EA4151E00AFD795 /* ETTVenues_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETTVenues_swiftTests.swift; sourceTree = "<group>"; };
 		11AD4B0D1EA4151E00AFD795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CF0AE51EA52DE10072A0AB /* Requester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		11CF0AE91EA533270072A0AB /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5AF190F8259958A8AF660F69 /* Pods-ETTVenues_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swift/Pods-ETTVenues_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		D8B69FA532DF10A59B428ACF /* Pods-ETTVenues_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swift/Pods-ETTVenues_swift.release.xcconfig"; sourceTree = "<group>"; };
 		FD6D6002677A2859CB91C196 /* Pods_ETTVenues_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ETTVenues_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1127B06E1EA5161E00B2C154 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1127B06F1EA5167C00B2C154 /* BaseObject.swift */,
+				1127B0721EA5169800B2C154 /* Photo.swift */,
+				1127B0751EA516A700B2C154 /* Venue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		11AD4ADE1EA3EEDE00AFD795 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +115,8 @@
 		11AD4AE91EA3EEDE00AFD795 /* ETTVenues_swift */ = {
 			isa = PBXGroup;
 			children = (
+				11CF0AE81EA5330F0072A0AB /* Common */,
+				1127B06E1EA5161E00B2C154 /* Models */,
 				11AD4AFF1EA3F33900AFD795 /* Managers */,
 				11AD4AFC1EA3F17100AFD795 /* UI */,
 				11AD4AEA1EA3EEDE00AFD795 /* AppDelegate.swift */,
@@ -113,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				11AD4B001EA3F33900AFD795 /* LocationManager */,
+				11CF0AE51EA52DE10072A0AB /* Requester.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -133,6 +161,14 @@
 				11AD4B0D1EA4151E00AFD795 /* Info.plist */,
 			);
 			path = ETTVenues_swiftTests;
+			sourceTree = "<group>";
+		};
+		11CF0AE81EA5330F0072A0AB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				11CF0AE91EA533270072A0AB /* Errors.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		B00CCDEDC4DE842386EBE39C /* Pods */ = {
@@ -306,9 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1127B0731EA5169800B2C154 /* Photo.swift in Sources */,
 				11AD4AFE1EA3F17100AFD795 /* PhotosViewController.swift in Sources */,
+				11CF0AE61EA52DE10072A0AB /* Requester.swift in Sources */,
+				1127B0701EA5167C00B2C154 /* BaseObject.swift in Sources */,
+				1127B0761EA516A700B2C154 /* Venue.swift in Sources */,
 				11AD4AEB1EA3EEDE00AFD795 /* AppDelegate.swift in Sources */,
 				11AD4B041EA3F83300AFD795 /* LocationObserver.swift in Sources */,
+				11CF0AEA1EA533270072A0AB /* Errors.swift in Sources */,
 				11AD4B021EA3F35700AFD795 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,8 +359,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11AD4B151EA41B3B00AFD795 /* LocationObserver.swift in Sources */,
+				1127B0771EA516A700B2C154 /* Venue.swift in Sources */,
+				1127B0711EA5167C00B2C154 /* BaseObject.swift in Sources */,
 				11AD4B141EA415FC00AFD795 /* LocationManager.swift in Sources */,
+				11CF0AEB1EA533270072A0AB /* Errors.swift in Sources */,
+				11CF0AE71EA52DE10072A0AB /* Requester.swift in Sources */,
 				11AD4B0C1EA4151E00AFD795 /* ETTVenues_swiftTests.swift in Sources */,
+				1127B0741EA5169800B2C154 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +574,7 @@
 				11AD4B121EA4151E00AFD795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -63,4 +63,51 @@ class ETTVenues_swiftTests: XCTestCase {
             XCTAssertNil(error, String(format: "LocationManager test failed. Error: %@", error!.localizedDescription))
         }
     }
+    
+    
+    func testPhotoDataModel() {
+        let i_dictionary = ["id": "58c1a27f7b43b418712a98ed",
+                            "prefix": "https://igx.4sqi.net/img/general/",
+                            "suffix": "/1322106_h4X6cYGloL7t0eirbyNlt_f87bs4XaWhFOhMF0Ib7qs.jpg"]
+        
+        let photo = Photo(withDictionary: i_dictionary)
+        
+        XCTAssertEqual(photo.objectID, "58c1a27f7b43b418712a98ed", "Photo initialization test failed.")
+        XCTAssertEqual(photo.prefix, "https://igx.4sqi.net/img/general/", "Photo initialization test failed.")
+        XCTAssertEqual(photo.suffix, "/1322106_h4X6cYGloL7t0eirbyNlt_f87bs4XaWhFOhMF0Ib7qs.jpg", "Photo initialization test failed.")
+        XCTAssertNotNil(photo.previewURL(withSize: CGSize(width: 50.0, height: 50.0)), "Photo \"preview\" URL building test failed.")
+        XCTAssertNotNil(photo.originalURL(), "Photo \"original\" URL building test failed.")
+        
+        let m_dictionary = ["response": ["photos": ["items": [
+            i_dictionary,
+            i_dictionary,
+            ]]]]
+        
+        let photos = Photo.photos(withDictionary: m_dictionary)
+        
+        XCTAssert(photos.count == 2, "Photo multiple objects initialization test failed.")
+        XCTAssertEqual(photos[0].objectID, "58c1a27f7b43b418712a98ed", "Photo initialization test failed.")
+        XCTAssertEqual(photos[1].objectID, "58c1a27f7b43b418712a98ed", "Photo initialization test failed.")
+    }
+    
+    
+    func testVenueDataModel() {
+        let i_dictionary = ["id": "4f60d6e2e4b02a8707792bfa",
+                            "name": "Downtown San Francisco"]
+        
+        let venue = Venue(withDictionary: i_dictionary)
+        
+        XCTAssertEqual(venue.objectID, "4f60d6e2e4b02a8707792bfa", "Venue initialization test failed.")
+        XCTAssertEqual(venue.name, "Downtown San Francisco", "Venue initialization test failed.")
+        
+        let m_dictionary = ["response": ["venues" : [
+            i_dictionary,
+            i_dictionary,
+            ]]]
+        
+        let venues = Venue.venues(withDictionary: m_dictionary)
+        XCTAssert(venues.count == 2, "Venue multiple objects initialization test failed.")
+        XCTAssertEqual(venues[0].objectID, "4f60d6e2e4b02a8707792bfa", "Venue initialization test failed.")
+        XCTAssertEqual(venues[1].objectID, "4f60d6e2e4b02a8707792bfa", "Venue initialization test failed.")
+    }
 }

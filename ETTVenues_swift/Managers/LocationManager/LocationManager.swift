@@ -7,7 +7,6 @@
 //
 
 
-import UIKit
 import CoreLocation
 
 
@@ -16,7 +15,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     typealias ObservationBlock = (CLLocation?, Error?) -> Void
     
     
-    struct Constants {
+    private struct Constants {
         static let DefaultDistanceFilter: CLLocationDistance = 200.0
     }
     
