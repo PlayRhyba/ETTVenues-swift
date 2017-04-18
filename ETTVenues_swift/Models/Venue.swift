@@ -27,7 +27,7 @@ class Venue: BaseObject {
     //MARK: Public Methods
     
     
-    static func venues(withDictionary dictionary: [String: Any]?) -> [Venue] {
+    class func venues(withDictionary dictionary: [String: Any]?) -> [Venue] {
         var result = [Venue]()
         
         let response = dictionary?["response"] as? [String: Any]

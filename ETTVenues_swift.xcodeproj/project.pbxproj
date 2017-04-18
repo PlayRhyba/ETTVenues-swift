@@ -17,7 +17,6 @@
 		11AD4AF01EA3EEDE00AFD795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AD4AEE1EA3EEDE00AFD795 /* Main.storyboard */; };
 		11AD4AF21EA3EEDE00AFD795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AD4AF11EA3EEDE00AFD795 /* Assets.xcassets */; };
 		11AD4AF51EA3EEDE00AFD795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AD4AF31EA3EEDE00AFD795 /* LaunchScreen.storyboard */; };
-		11AD4AFE1EA3F17100AFD795 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4AFD1EA3F17100AFD795 /* PhotosViewController.swift */; };
 		11AD4B021EA3F35700AFD795 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4B011EA3F35700AFD795 /* LocationManager.swift */; };
 		11AD4B041EA3F83300AFD795 /* LocationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4B031EA3F83300AFD795 /* LocationObserver.swift */; };
 		11AD4B0C1EA4151E00AFD795 /* ETTVenues_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD4B0B1EA4151E00AFD795 /* ETTVenues_swiftTests.swift */; };
@@ -28,6 +27,15 @@
 		11CF0AEA1EA533270072A0AB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0AE91EA533270072A0AB /* Errors.swift */; };
 		11CF0AEB1EA533270072A0AB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0AE91EA533270072A0AB /* Errors.swift */; };
 		30A22F37BDB814A9F3CE2219 /* Pods_ETTVenues_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6D6002677A2859CB91C196 /* Pods_ETTVenues_swift.framework */; };
+		C77D50C01EA6297B00C8AD60 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50BF1EA6297B00C8AD60 /* PhotosViewController.swift */; };
+		C77D50C11EA6297B00C8AD60 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50BF1EA6297B00C8AD60 /* PhotosViewController.swift */; };
+		C77D50C31EA63EE700C8AD60 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C21EA63EE700C8AD60 /* PhotoCell.swift */; };
+		C77D50C41EA63EE700C8AD60 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C21EA63EE700C8AD60 /* PhotoCell.swift */; };
+		C77D50C61EA6411A00C8AD60 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */; };
+		C77D50C71EA6411A00C8AD60 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */; };
+		C77D50CA1EA6440800C8AD60 /* UIImageView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C91EA6440800C8AD60 /* UIImageView+Loading.swift */; };
+		C77D50CB1EA6440800C8AD60 /* UIImageView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C91EA6440800C8AD60 /* UIImageView+Loading.swift */; };
+		FEE59E52085DF66EEBA618E4 /* Pods_ETTVenues_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2B7D6B47CFF420705E4466 /* Pods_ETTVenues_swiftTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +58,6 @@
 		11AD4AF11EA3EEDE00AFD795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11AD4AF41EA3EEDE00AFD795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11AD4AF61EA3EEDE00AFD795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11AD4AFD1EA3F17100AFD795 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		11AD4B011EA3F35700AFD795 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		11AD4B031EA3F83300AFD795 /* LocationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationObserver.swift; sourceTree = "<group>"; };
 		11AD4B091EA4151E00AFD795 /* ETTVenues_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETTVenues_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +66,14 @@
 		11CF0AE51EA52DE10072A0AB /* Requester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		11CF0AE91EA533270072A0AB /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5AF190F8259958A8AF660F69 /* Pods-ETTVenues_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swift/Pods-ETTVenues_swift.debug.xcconfig"; sourceTree = "<group>"; };
+		5E2B7D6B47CFF420705E4466 /* Pods_ETTVenues_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ETTVenues_swiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26E86DCBB38419159EF5712 /* Pods-ETTVenues_swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swiftTests/Pods-ETTVenues_swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C77D50BF1EA6297B00C8AD60 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		C77D50C21EA63EE700C8AD60 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = ETTVenues_swift/UI/PhotoViewController.swift; sourceTree = SOURCE_ROOT; };
+		C77D50C91EA6440800C8AD60 /* UIImageView+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loading.swift"; sourceTree = "<group>"; };
 		D8B69FA532DF10A59B428ACF /* Pods-ETTVenues_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swift/Pods-ETTVenues_swift.release.xcconfig"; sourceTree = "<group>"; };
+		DBE355A5B6273DFF241A1C83 /* Pods-ETTVenues_swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swiftTests/Pods-ETTVenues_swiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD6D6002677A2859CB91C196 /* Pods_ETTVenues_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ETTVenues_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE59E52085DF66EEBA618E4 /* Pods_ETTVenues_swiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +146,7 @@
 		11AD4AFC1EA3F17100AFD795 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				11AD4AFD1EA3F17100AFD795 /* PhotosViewController.swift */,
+				C77D50BE1EA6297B00C8AD60 /* PhotosViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -166,6 +181,7 @@
 		11CF0AE81EA5330F0072A0AB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C77D50C81EA643F700C8AD60 /* Extensions */,
 				11CF0AE91EA533270072A0AB /* Errors.swift */,
 			);
 			path = Common;
@@ -176,6 +192,8 @@
 			children = (
 				5AF190F8259958A8AF660F69 /* Pods-ETTVenues_swift.debug.xcconfig */,
 				D8B69FA532DF10A59B428ACF /* Pods-ETTVenues_swift.release.xcconfig */,
+				C26E86DCBB38419159EF5712 /* Pods-ETTVenues_swiftTests.debug.xcconfig */,
+				DBE355A5B6273DFF241A1C83 /* Pods-ETTVenues_swiftTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -184,8 +202,27 @@
 			isa = PBXGroup;
 			children = (
 				FD6D6002677A2859CB91C196 /* Pods_ETTVenues_swift.framework */,
+				5E2B7D6B47CFF420705E4466 /* Pods_ETTVenues_swiftTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C77D50BE1EA6297B00C8AD60 /* PhotosViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C77D50C21EA63EE700C8AD60 /* PhotoCell.swift */,
+				C77D50BF1EA6297B00C8AD60 /* PhotosViewController.swift */,
+				C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */,
+			);
+			path = PhotosViewController;
+			sourceTree = "<group>";
+		};
+		C77D50C81EA643F700C8AD60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C77D50C91EA6440800C8AD60 /* UIImageView+Loading.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11AD4B101EA4151E00AFD795 /* Build configuration list for PBXNativeTarget "ETTVenues_swiftTests" */;
 			buildPhases = (
+				4273C053310C019EC26B9AE3 /* [CP] Check Pods Manifest.lock */,
 				11AD4B051EA4151E00AFD795 /* Sources */,
 				11AD4B061EA4151E00AFD795 /* Frameworks */,
 				11AD4B071EA4151E00AFD795 /* Resources */,
+				5A4CF085187CA62D4FE74DC6 /* [CP] Embed Pods Frameworks */,
+				7F3DAFE7187A99ECC4A8D9FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,6 +330,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4273C053310C019EC26B9AE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5A4CF085187CA62D4FE74DC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ETTVenues_swiftTests/Pods-ETTVenues_swiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5F618DAAC40C948AFA0D712D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,6 +373,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ETTVenues_swift/Pods-ETTVenues_swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F3DAFE7187A99ECC4A8D9FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ETTVenues_swiftTests/Pods-ETTVenues_swiftTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8ABB421FDEF820A42F99B1B /* [CP] Copy Pods Resources */ = {
@@ -343,14 +428,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1127B0731EA5169800B2C154 /* Photo.swift in Sources */,
-				11AD4AFE1EA3F17100AFD795 /* PhotosViewController.swift in Sources */,
 				11CF0AE61EA52DE10072A0AB /* Requester.swift in Sources */,
 				1127B0701EA5167C00B2C154 /* BaseObject.swift in Sources */,
 				1127B0761EA516A700B2C154 /* Venue.swift in Sources */,
 				11AD4AEB1EA3EEDE00AFD795 /* AppDelegate.swift in Sources */,
+				C77D50CA1EA6440800C8AD60 /* UIImageView+Loading.swift in Sources */,
 				11AD4B041EA3F83300AFD795 /* LocationObserver.swift in Sources */,
 				11CF0AEA1EA533270072A0AB /* Errors.swift in Sources */,
 				11AD4B021EA3F35700AFD795 /* LocationManager.swift in Sources */,
+				C77D50C01EA6297B00C8AD60 /* PhotosViewController.swift in Sources */,
+				C77D50C31EA63EE700C8AD60 /* PhotoCell.swift in Sources */,
+				C77D50C61EA6411A00C8AD60 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +446,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C77D50C11EA6297B00C8AD60 /* PhotosViewController.swift in Sources */,
 				11AD4B151EA41B3B00AFD795 /* LocationObserver.swift in Sources */,
 				1127B0771EA516A700B2C154 /* Venue.swift in Sources */,
 				1127B0711EA5167C00B2C154 /* BaseObject.swift in Sources */,
 				11AD4B141EA415FC00AFD795 /* LocationManager.swift in Sources */,
+				C77D50CB1EA6440800C8AD60 /* UIImageView+Loading.swift in Sources */,
 				11CF0AEB1EA533270072A0AB /* Errors.swift in Sources */,
 				11CF0AE71EA52DE10072A0AB /* Requester.swift in Sources */,
 				11AD4B0C1EA4151E00AFD795 /* ETTVenues_swiftTests.swift in Sources */,
 				1127B0741EA5169800B2C154 /* Photo.swift in Sources */,
+				C77D50C41EA63EE700C8AD60 /* PhotoCell.swift in Sources */,
+				C77D50C71EA6411A00C8AD60 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +614,7 @@
 		};
 		11AD4B111EA4151E00AFD795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C26E86DCBB38419159EF5712 /* Pods-ETTVenues_swiftTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ETTVenues_swiftTests/Info.plist;
@@ -535,6 +628,7 @@
 		};
 		11AD4B121EA4151E00AFD795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBE355A5B6273DFF241A1C83 /* Pods-ETTVenues_swiftTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ETTVenues_swiftTests/Info.plist;

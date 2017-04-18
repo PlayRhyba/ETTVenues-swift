@@ -10,3 +10,9 @@ target 'ETTVenues_swift' do
   pod 'AFNetworking'
 
 end
+
+
+target 'ETTVenues_swiftTests' do
+    use_frameworks!
+    pod 'AFNetworking'
+end

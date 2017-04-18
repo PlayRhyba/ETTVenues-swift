@@ -12,7 +12,7 @@
         <!--Venues-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="ETTVenues_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="PhotosViewController" customModule="ETTVenues_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,15 +20,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-a5-2mX">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="w6w-Mq-O6J">
+                                    <size key="itemSize" width="73" height="73"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="cTr-1I-bFy" customClass="PhotoCell" customModule="ETTVenues_swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ItO-nL-Ich">
+                                                    <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ItO-nL-Ich" secondAttribute="trailing" id="6jx-c5-YGZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ItO-nL-Ich" secondAttribute="bottom" id="D5k-f3-aLT"/>
+                                            <constraint firstItem="ItO-nL-Ich" firstAttribute="top" secondItem="cTr-1I-bFy" secondAttribute="top" id="Tkx-nu-fdr"/>
+                                            <constraint firstItem="ItO-nL-Ich" firstAttribute="leading" secondItem="cTr-1I-bFy" secondAttribute="leading" id="wxC-O6-SUb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="ItO-nL-Ich" id="8w2-jV-BoE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KIw-n6-FMd"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hOd-a5-2mX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RdA-hk-Sys"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hOd-a5-2mX" secondAttribute="bottom" id="TdD-WU-nnD"/>
+                            <constraint firstAttribute="trailing" secondItem="hOd-a5-2mX" secondAttribute="trailing" id="ZHA-KD-2jg"/>
+                            <constraint firstItem="hOd-a5-2mX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eyu-DE-lM6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Venues" id="Hq6-Wf-Jyv">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="9ef-84-xzy"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="hOd-a5-2mX" id="pBv-st-VpR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="139"/>
+            <point key="canvasLocation" x="221.25" y="138.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BL5-no-MjP">

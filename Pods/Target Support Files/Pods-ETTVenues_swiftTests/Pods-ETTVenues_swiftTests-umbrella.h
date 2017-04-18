@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ETTVenues_swiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ETTVenues_swiftVersionString[];
+FOUNDATION_EXPORT double Pods_ETTVenues_swiftTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ETTVenues_swiftTestsVersionString[];
 

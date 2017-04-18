@@ -46,7 +46,39 @@ class Requester: NSObject {
                 completion(nil, error)
             }
             else {
-                
+                DispatchQueue.global().async {
+                    var resultPhotos = [Photo]()
+                    var lastError: Error?
+                    
+                    for venue in venues! {
+                        if resultPhotos.count >= Constants.MaxPhotosAmount { break }
+                        
+                        let semaphore = DispatchSemaphore(value: 0)
+                        
+                        self.photos(withVenueID: venue.id!,
+                                    completion: { (photos, error) in
+                                        if error != nil {
+                                            lastError = error
+                                        }
+                                        else {
+                                            for photo in photos! {
+                                                if resultPhotos.count >= Constants.MaxPhotosAmount { break }
+                                                
+                                                photo.venue = venue
+                                                resultPhotos.append(photo)
+                                            }
+                                        }
+                                        
+                                        semaphore.signal()
+                        })
+                        
+                        _ = semaphore.wait(timeout: .distantFuture)
+                    }
+                    
+                    DispatchQueue.main.async {
+                        completion(resultPhotos, lastError)
+                    }
+                }
             }
         }
     }
@@ -55,8 +87,8 @@ class Requester: NSObject {
     //MARK: Internal Logic
     
     
-    func venues(withLocation location: CLLocation,
-                completion:@escaping ([Venue]?, Error?) -> Void) {
+    private func venues(withLocation location: CLLocation,
+                        completion:@escaping ([Venue]?, Error?) -> Void) {
         let parameters = commonParameters()
         
         parameters.addEntries(from: ["limit": Constants.VenuesLimit,
@@ -82,8 +114,8 @@ class Requester: NSObject {
     }
     
     
-    func photos(withVenueID venueID: String,
-                completion:@escaping ([Photo]?, Error?) -> Void) {
+    private func photos(withVenueID venueID: String,
+                        completion:@escaping ([Photo]?, Error?) -> Void) {
         let parameters = commonParameters()
         parameters.addEntries(from: ["limit": Constants.MaxPhotosAmount])
         
@@ -104,7 +136,7 @@ class Requester: NSObject {
     }
     
     
-    func commonParameters() -> NSMutableDictionary {
+    private func commonParameters() -> NSMutableDictionary {
         return ["client_id": Constants.ClientID,
                 "client_secret": Constants.ClientSecret,
                 "v": Constants.VersionDate]

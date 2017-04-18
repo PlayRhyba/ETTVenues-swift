@@ -14,7 +14,7 @@ class Photo: BaseObject {
     
     let prefix: String?
     let suffix: String?
-    let venue: Venue? = nil
+    var venue: Venue?
     
     
     //MARK: Initialization
@@ -31,7 +31,7 @@ class Photo: BaseObject {
     //MARK: Public Methods
     
     
-    static func photos(withDictionary dictionary: [String: Any]?) -> [Photo] {
+    class func photos(withDictionary dictionary: [String: Any]?) -> [Photo] {
         var result = [Photo]()
         
         let response = dictionary?["response"] as? [String: Any]

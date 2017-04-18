@@ -12,14 +12,14 @@ import Foundation
 
 class BaseObject: NSObject {
     
-    let objectID: String?
+    let id: String?
     
     
     //MARK: Initialization
     
     
     init(withDictionary dictionary: [String: Any]?) {
-        objectID = dictionary?["id"] as? String
+        id = dictionary?["id"] as? String
         super.init()
     }
 }

@@ -1,0 +1,6 @@
+framework module Pods_ETTVenues_swiftTests {
+  umbrella header "Pods-ETTVenues_swiftTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
