@@ -147,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				C77D50BE1EA6297B00C8AD60 /* PhotosViewController */,
+				C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -212,7 +213,6 @@
 			children = (
 				C77D50C21EA63EE700C8AD60 /* PhotoCell.swift */,
 				C77D50BF1EA6297B00C8AD60 /* PhotosViewController.swift */,
-				C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */,
 			);
 			path = PhotosViewController;
 			sourceTree = "<group>";

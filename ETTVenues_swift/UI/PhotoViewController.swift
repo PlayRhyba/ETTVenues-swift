@@ -12,5 +12,17 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     weak var photo: Photo!
+    
+    
+    //MARK: Lifecycle
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.title = photo.venue?.name
+        imageView.load(withURL: photo.originalURL())
+    }
 }
