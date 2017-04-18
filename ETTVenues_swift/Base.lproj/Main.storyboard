@@ -69,7 +69,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Venues" id="Hq6-Wf-Jyv">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="9ef-84-xzy"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="9ef-84-xzy">
+                            <connections>
+                                <segue destination="SUL-rd-7fB" kind="show" id="G0t-8K-hJb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="hOd-a5-2mX" id="pBv-st-VpR"/>
@@ -78,6 +82,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="236" y="139"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Gmn-Uk-SzB">
+            <objects>
+                <viewController id="SUL-rd-7fB" customClass="SettingsViewController" customModule="ETTVenues_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zFQ-Ls-zMf"/>
+                        <viewControllerLayoutGuide type="bottom" id="eNj-av-pfk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rMl-yZ-Xfl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Filter: 2000.0 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVp-bT-UBj">
+                                <rect key="frame" x="16" y="95" width="220" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="TrX-qo-qJ8"/>
+                                    <constraint firstAttribute="width" constant="220" id="Za3-O4-QLL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="100" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ZmF-5c-6nK">
+                                <rect key="frame" x="14" y="126" width="292" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChangedWithSender:" destination="SUL-rd-7fB" eventType="valueChanged" id="rDT-5x-WYy"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZmF-5c-6nK" secondAttribute="trailing" constant="16" id="I6V-eS-XnH"/>
+                            <constraint firstItem="ZmF-5c-6nK" firstAttribute="top" secondItem="hVp-bT-UBj" secondAttribute="bottom" constant="10" id="I90-Id-iTS"/>
+                            <constraint firstItem="hVp-bT-UBj" firstAttribute="leading" secondItem="rMl-yZ-Xfl" secondAttribute="leading" constant="16" id="TFN-S1-Q6p"/>
+                            <constraint firstItem="ZmF-5c-6nK" firstAttribute="leading" secondItem="rMl-yZ-Xfl" secondAttribute="leading" constant="16" id="WUV-qp-2D2"/>
+                            <constraint firstItem="hVp-bT-UBj" firstAttribute="top" secondItem="zFQ-Ls-zMf" secondAttribute="bottom" constant="31" id="qfe-kU-Xfj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="1Hq-2g-YoK"/>
+                    <connections>
+                        <outlet property="label" destination="hVp-bT-UBj" id="HYb-hj-hDG"/>
+                        <outlet property="slider" destination="ZmF-5c-6nK" id="J2I-ag-Tef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dK-EU-L2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="-39"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="rXW-tT-dIQ">

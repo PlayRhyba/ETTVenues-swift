@@ -35,6 +35,7 @@
 		C77D50C71EA6411A00C8AD60 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */; };
 		C77D50CA1EA6440800C8AD60 /* UIImageView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C91EA6440800C8AD60 /* UIImageView+Loading.swift */; };
 		C77D50CB1EA6440800C8AD60 /* UIImageView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50C91EA6440800C8AD60 /* UIImageView+Loading.swift */; };
+		C77D50CD1EA6775500C8AD60 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D50CC1EA6775500C8AD60 /* SettingsViewController.swift */; };
 		FEE59E52085DF66EEBA618E4 /* Pods_ETTVenues_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2B7D6B47CFF420705E4466 /* Pods_ETTVenues_swiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		C77D50C21EA63EE700C8AD60 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = ETTVenues_swift/UI/PhotoViewController.swift; sourceTree = SOURCE_ROOT; };
 		C77D50C91EA6440800C8AD60 /* UIImageView+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loading.swift"; sourceTree = "<group>"; };
+		C77D50CC1EA6775500C8AD60 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8B69FA532DF10A59B428ACF /* Pods-ETTVenues_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swift/Pods-ETTVenues_swift.release.xcconfig"; sourceTree = "<group>"; };
 		DBE355A5B6273DFF241A1C83 /* Pods-ETTVenues_swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETTVenues_swiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ETTVenues_swiftTests/Pods-ETTVenues_swiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD6D6002677A2859CB91C196 /* Pods_ETTVenues_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ETTVenues_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 			children = (
 				C77D50BE1EA6297B00C8AD60 /* PhotosViewController */,
 				C77D50C51EA6411A00C8AD60 /* PhotoViewController.swift */,
+				C77D50CC1EA6775500C8AD60 /* SettingsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				11CF0AEA1EA533270072A0AB /* Errors.swift in Sources */,
 				11AD4B021EA3F35700AFD795 /* LocationManager.swift in Sources */,
 				C77D50C01EA6297B00C8AD60 /* PhotosViewController.swift in Sources */,
+				C77D50CD1EA6775500C8AD60 /* SettingsViewController.swift in Sources */,
 				C77D50C31EA63EE700C8AD60 /* PhotoCell.swift in Sources */,
 				C77D50C61EA6411A00C8AD60 /* PhotoViewController.swift in Sources */,
 			);
