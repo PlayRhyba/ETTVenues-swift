@@ -13,6 +13,8 @@ import AFNetworking
 
 class Requester: NSObject {
     
+    //TODO: Migrate to Alamofire
+    
     struct Constants {
         static let MaxPhotosAmount = 100
         static let BaseURL = "https://api.foursquare.com"
@@ -24,7 +26,7 @@ class Requester: NSObject {
     
     
     let sessionManager: AFHTTPSessionManager
-    static let sharedInstance = Requester()
+    static let shared = Requester()
     
     
     //MARK: Initialization

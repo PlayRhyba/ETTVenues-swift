@@ -252,8 +252,8 @@
 			children = (
 				E3A1DF611F5C39AA008FA247 /* PhotosListModels.swift */,
 				E3A1DF651F5C39C2008FA247 /* PhotosListRouter.swift */,
-				E3A1DF5F1F5C3998008FA247 /* PhotosListInteractor.swift */,
 				E3A1DF631F5C39B6008FA247 /* PhotosListPresenter.swift */,
+				E3A1DF5F1F5C3998008FA247 /* PhotosListInteractor.swift */,
 				E3A1DF671F5C39CD008FA247 /* PhotosListViewController.swift */,
 			);
 			path = PhotosList;

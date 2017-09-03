@@ -22,17 +22,17 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LocationManager.sharedInstance.addObservationBlock({ (location, error) in
+        LocationManager.shared.addObservationBlock({ (location, error) in
             if let loc = location {
                 NSLog("LOCATION UPDATED: %@", loc)
                 
                 UIApplication.shared.isNetworkActivityIndicatorVisible = true
                 
-                Requester.sharedInstance.photos(withLocation: loc,
-                                                completion: { (photos, errpr) in
-                                                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                                                    self.photos = photos!
-                                                    self.collectionView.reloadData()
+                Requester.shared.photos(withLocation: loc,
+                                        completion: { (photos, errpr) in
+                                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                                            self.photos = photos!
+                                            self.collectionView.reloadData()
                 })
             }
             else {
@@ -44,13 +44,13 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        LocationManager.sharedInstance.startObserving()
+        LocationManager.shared.startObserving()
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        LocationManager.sharedInstance.stopObserving()
+        LocationManager.shared.stopObserving()
     }
     
     

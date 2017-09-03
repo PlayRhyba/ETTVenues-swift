@@ -18,7 +18,7 @@ enum PhotosList {
         
         struct Response {
             
-            var previews: [Photo]
+            var photos: [Photo]
             
         }
         

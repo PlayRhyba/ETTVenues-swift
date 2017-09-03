@@ -6,24 +6,19 @@
 //  Copyright © 2017 Alexander Snegursky. All rights reserved.
 //
 
-
 import CoreLocation
 
-
-class LocationManager: NSObject, CLLocationManagerDelegate {
+class LocationManager: NSObject {
     
     typealias ObservationBlock = (CLLocation?, Error?) -> Void
     
-    
     private struct Constants {
-        static let DefaultDistanceFilter: CLLocationDistance = 200.0
+        static let defaultDistanceFilter: CLLocationDistance = 200.0
     }
     
-    
-    static let sharedInstance = LocationManager()
+    static let shared = LocationManager()
     private let locationManager: CLLocationManager
-    private lazy var observers = Set<LocationObserver>()
-    
+    fileprivate lazy var observers = Set<LocationObserver>()
     
     var distanceFilter: CLLocationDistance {
         get {
@@ -34,14 +29,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
     
-    
     var observationBlocksCount: Int {
         return observers.count
     }
     
-    
-    //MARK: Initialization
-    
+    // MARK: Initialization
     
     private override init() {
         locationManager = CLLocationManager()
@@ -51,22 +43,18 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         super.init()
         
         locationManager.delegate = self
-        distanceFilter = Constants.DefaultDistanceFilter
+        distanceFilter = Constants.defaultDistanceFilter
     }
     
-    
-    //MARK: Public Methods
-    
+    // MARK: Public Methods
     
     func startObserving() {
         locationManager.startUpdatingLocation()
     }
     
-    
     func stopObserving() {
         locationManager.stopUpdatingLocation()
     }
-    
     
     func addObservationBlock(_ block: @escaping ObservationBlock,
                              withIdentifier identifier: String,
@@ -77,30 +65,25 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         observers.insert(observer)
     }
     
-    
     func removeObservationBlock(withIdentifier identifier: String) {
-        for observer in observers {
-            if observer.identifier == identifier {
-                observers.remove(observer)
-                break
-            }
+        guard let observer = observers.first(where: { $0.identifier == identifier }) else {
+            return
         }
+        
+        observers.remove(observer)
     }
     
-    
-    //MARK: CLLocationManagerDelegate
-    
+}
+
+extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        for observer in observers {
-            observer.invoke(withLocation: locations.first, error: nil)
-        }
+        observers.forEach { $0.invoke(withLocation: locations.first, error: nil) }
     }
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        for observer in observers {
-            observer.invoke(withLocation: nil, error: error)
-        }
+        observers.forEach { $0.invoke(withLocation: nil, error: error) }
     }
+    
 }

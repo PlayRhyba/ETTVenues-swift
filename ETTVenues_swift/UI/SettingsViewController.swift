@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateLabel()
-        slider.value = Float(LocationManager.sharedInstance.distanceFilter)
+        slider.value = Float(LocationManager.shared.distanceFilter)
     }
     
     
@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func sliderValueChanged(sender: UISlider) {
-        LocationManager.sharedInstance.distanceFilter = Double(slider.value)
+        LocationManager.shared.distanceFilter = Double(slider.value)
         self.updateLabel()
     }
     
@@ -39,6 +39,6 @@ class SettingsViewController: UIViewController {
     
     
     private func updateLabel() {
-        label.text = String(format: "Distance Filter: %.1f m", LocationManager.sharedInstance.distanceFilter)
+        label.text = String(format: "Distance Filter: %.1f m", LocationManager.shared.distanceFilter)
     }
 }

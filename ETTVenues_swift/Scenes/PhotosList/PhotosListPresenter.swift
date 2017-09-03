@@ -10,10 +10,22 @@ import Foundation
 
 protocol PhotosListPresentationLogic {
     
+    func presentPreviews(response: PhotosList.FetchPreviews.Response)
+    
 }
 
-class PhotosListPresenter: PhotosListPresentationLogic {
+class PhotosListPresenter {
     
     weak var viewController: PhotosListDisplayLogic!
+    
+}
 
+extension PhotosListPresenter: PhotosListPresentationLogic {
+    
+    func presentPreviews(response: PhotosList.FetchPreviews.Response) {
+        
+        //TODO: Transform response to viewModel and send to ViewController
+        
+    }
+    
 }
