@@ -6,26 +6,20 @@
 //  Copyright © 2017 Alexander Snegursky. All rights reserved.
 //
 
-
 import Foundation
-
 
 class Venue: BaseObject {
     
     let name: String?
     
-    
-    //MARK: Initialization
-    
+    // MARK: Initialization
     
     override init(withDictionary dictionary: [String: Any]?) {
         name = dictionary?["name"] as? String
         super.init(withDictionary: dictionary)
     }
     
-    
-    //MARK: Public Methods
-    
+    // MARK: Public Methods
     
     class func venues(withDictionary dictionary: [String: Any]?) -> [Venue] {
         var result = [Venue]()
@@ -33,8 +27,8 @@ class Venue: BaseObject {
         let response = dictionary?["response"] as? [String: Any]
         let venues = response?["venues"] as? [[String: Any]]
         
-        if venues != nil {
-            for dictionary in venues! {
+        if let venues = venues {
+            for dictionary in venues {
                 let venue = Venue(withDictionary: dictionary)
                 result.append(venue)
             }
@@ -42,4 +36,5 @@ class Venue: BaseObject {
         
         return result
     }
+    
 }

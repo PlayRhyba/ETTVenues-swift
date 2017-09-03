@@ -105,7 +105,7 @@ class Requester: NSObject {
                                 completion(venues, nil)
                             }
                             else {
-                                completion(nil, Errors.unexpectedResponseDataStructureError())
+                                completion(nil, Errors.unexpectedResponseDataStructureError)
                             }
                             
         }) { (_, error) in
@@ -128,7 +128,7 @@ class Requester: NSObject {
                                 completion(photos, nil)
                             }
                             else {
-                                completion(nil, Errors.unexpectedResponseDataStructureError())
+                                completion(nil, Errors.unexpectedResponseDataStructureError)
                             }
         }) { (_, error) in
             completion(nil, error)
