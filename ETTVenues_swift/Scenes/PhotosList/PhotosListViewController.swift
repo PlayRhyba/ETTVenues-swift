@@ -17,7 +17,7 @@ protocol PhotosListDisplayLogic: class {
 
 class PhotosListViewController: UIViewController {
     
-    fileprivate var interactor: PhotosListBusinessLogic!
+    fileprivate var interactor: PhotosListBusinessLogic?
     fileprivate var router: PhotosListRoutingLogic!
     fileprivate var previews:  [PhotosList.FetchPreviews.ViewModel.PhotoPreview] = []
     
@@ -39,13 +39,13 @@ class PhotosListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        interactor.startObservingLocation()
+        interactor?.startObservingLocation()
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        interactor.stopObservingLocation()
+        interactor?.stopObservingLocation()
     }
     
     // MARK: Setup
@@ -93,7 +93,7 @@ extension PhotosListViewController: UICollectionViewDataSource {
         
         let preview = previews[indexPath.row]
         let request = PhotosList.FetchPhoto.Request(id: preview.id)
-        interactor.fetchPreviewImage(request: request)
+        interactor?.fetchPreviewImage(request: request)
         
         return cell
     }

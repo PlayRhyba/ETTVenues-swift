@@ -18,7 +18,7 @@ protocol PhotosListBusinessLogic {
 
 class PhotosListInteractor {
     
-    var presenter: PhotosListPresentationLogic!
+    var presenter: PhotosListPresentationLogic?
     
     // MARK: Initialization
     
@@ -34,7 +34,7 @@ class PhotosListInteractor {
                                             UIApplication.shared.isNetworkActivityIndicatorVisible = false
                                             
                                             let response = PhotosList.FetchPreviews.Response(photos: photos ?? [])
-                                            self.presenter.presentPreviews(response: response)
+                                            self.presenter?.presentPreviews(response: response)
                 })
             }
             else {

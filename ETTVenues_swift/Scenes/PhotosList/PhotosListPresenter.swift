@@ -16,7 +16,7 @@ protocol PhotosListPresentationLogic {
 
 class PhotosListPresenter {
     
-    weak var viewController: PhotosListDisplayLogic!
+    weak var viewController: PhotosListDisplayLogic?
     
 }
 
